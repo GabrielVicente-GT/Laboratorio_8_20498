@@ -1,0 +1,113 @@
+body{
+  background-color:#212F3D;
+}
+
+.App {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  background-color:#212F3D;
+}
+
+.tablero {
+  margin-top: 2%;
+  text-align: center;
+	width: 50%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.especial{
+  grid-column: 1 / 3;
+}
+
+.Display{
+  margin-top: 2%;
+  text-align: end;
+  width: 40%;
+  height: 50px;
+  border: 2px white solid;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 45px;
+}
+
+.Lab8{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.boton:hover {
+  color: #F98410;
+}
+.boton::before, .boton::after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: boton;
+}
+.boton::before {
+  border-top: 2px solid #F98410;
+  border-bottom: 2px solid #F98410;
+  transform: scale3d(0, 1, 1);
+}
+.boton::after {
+  border-left: 2px solid #F98410;
+  border-right: 2px solid #F98410;
+  transform: scale3d(1, 0, 1);
+}
+.boton:hover::before, .boton:hover::after {
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.5s;
+}
+
+
+.botonNumero:hover {
+  color: black;
+}
+.botonNumero::before, .botonNumero::after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: botonNumero;
+}
+.botonNumero::before {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: scale3d(0, 1, 1);
+}
+.botonNumero::after {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  transform: scale3d(1, 0, 1);
+}
+.botonNumero:hover::before, .botonNumero:hover::after {
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.5s;
+}
+
+
+
+button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  box-shadow: inset 0 0 0 2px white;
+  color: white;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: middle;
+}
+button::before, button::after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
